@@ -1,8 +1,10 @@
 import axios from 'axios';
 
+const URL = 'http://localhost:8080'
+
 export const getRequest = <T>(url: string) =>
 	axios
-		.get<T>(url)
+		.get<T>(URL + url)
 		.then((res) => res.data)
 		.catch((err) => {
 			console.error(err.message);
@@ -11,7 +13,7 @@ export const getRequest = <T>(url: string) =>
 
 export const putRequest = <T>(url: string, data: object) =>
 	axios
-		.put<T>(url, data)
+		.put<T>(URL + url, data)
 		.then((res) => res.data)
 		.catch((err) => {
 			console.error(err.message);
