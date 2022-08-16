@@ -4,11 +4,11 @@
 2. Run `npm start`
 
 ## Libraries used in codebase
-
 -   [typescript](https://create-react-app.dev/docs/adding-typescript/)
 -   [styled-components](https://styled-components.com/)
 -   [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
-<!-- - [recoil](https://recoiljs.org/) => for state management -->
+-   [recoil](https://recoiljs.org/) => for state management
+-   [axios](https://axios-http.com/) => for fetching data
 
 ## Available Scripts
 
