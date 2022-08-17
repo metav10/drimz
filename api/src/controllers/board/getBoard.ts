@@ -1,9 +1,11 @@
 import { Response, Request } from 'express';
-import { BOARD_DATA } from '../../constant/board';
+import { ID } from '.';
+import { fetchBoardData } from './board.utils';
 
 export const getBoard = async (req: Request, res: Response): Promise<void> => {
 	try {
-		res.status(200).json({ boardData: BOARD_DATA });
+		const { boardData } = await fetchBoardData(ID);
+		res.status(200).json({ boardData });
 	} catch (err) {
 		throw err;
 	}

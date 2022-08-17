@@ -1,3 +1,5 @@
+import { Document } from 'mongoose';
+
 export type CardType = {
 	id: string;
 	content: string | null;
@@ -14,3 +16,8 @@ export type SelectedCardType = {
 	cardIndex: number;
 	columnIndex: number;
 };
+
+export interface Board extends Document {
+	_id: string;
+	boardData: BoardType;
+}

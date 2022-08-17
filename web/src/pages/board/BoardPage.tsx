@@ -10,15 +10,13 @@ export const BoardPage = () => {
 	const [boardData, setBoardData] = useRecoilState(boardDataStore);
 
 	const updateBoardToServer = debounce(() => {
-		updateBoard(boardData).then((res) => {
-			console.log(res);
-		});
+		updateBoard(boardData);
 	}, 1000);
 
 	useEffect(() => {
 		fetchBoard().then((res) => {
 			if (!res) return;
-			setBoardData(res);
+			setBoardData(res.boardData);
 		});
 	}, [setBoardData]);
 
