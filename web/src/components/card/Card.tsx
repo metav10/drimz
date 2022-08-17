@@ -1,5 +1,6 @@
 import { DragEvent } from 'react';
 import { CardType } from '../../interfaces/Board';
+import { Button } from '../button/Button';
 import * as S from './Card.style';
 import { useCard } from './useCard';
 
@@ -12,7 +13,8 @@ export const Card = ({
 	onDragStart: () => void;
 	onDragEnd: (e: DragEvent<HTMLDivElement>) => void;
 }) => {
-	const { content, isImportant, setContent, setIsImportant } = useCard(card);
+	const { content, isImportant, setContent, setIsImportant, removeCard } =
+		useCard(card);
 
 	return (
 		<S.Card
@@ -33,6 +35,7 @@ export const Card = ({
 					}
 				/>
 			)}
+			<Button type="remove" onClick={removeCard} />
 		</S.Card>
 	);
 };

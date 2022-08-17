@@ -20,4 +20,13 @@ export const Add = styled(BasicButton)`
     padding-block-end: 6px;
 `;
 
+export const Remove = styled(BasicButton)`
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+    padding-block-end: 6px;
+    margin-inline-end: 10px;
+    background-color: #eff6ff;
+`;
+
 export const Classic = styled(BasicButton)``;
