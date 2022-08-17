@@ -24,3 +24,5 @@ mongoose.connect(uri, { autoIndex: true }).then(() => {
 		}
 	});
 });
+
+module.exports = app;
